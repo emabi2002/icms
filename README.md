@@ -12,9 +12,15 @@ A functional, database-free prototype for the Independent Commission Against Cor
 - Reports and performance summaries
 - Case search, filtering, detailed timelines and new-case creation
 
-## Data and security note
+## Netlify deployment
 
-This demonstration uses seeded sample data held in the browser session. It does not connect to a production database and must not be used to store real complaints, evidence, personal information or classified records.
+The repository is configured for Netlify through `netlify.toml`.
+
+- Build command: `npm run build`
+- Publish directory: `.next`
+- Node.js: version 22
+
+Connect the repository in Netlify and deploy the `main` branch. Netlify's Next.js runtime handles the generated application automatically.
 
 ## Run locally
 
@@ -23,10 +29,8 @@ This demonstration uses seeded sample data held in the browser session. It does 
 3. Run `npm run dev`.
 4. Open the local address shown in the terminal.
 
-## Validation
+## Data and security notice
 
-Run `npm run lint` and `npm run build`.
+This demonstration uses seeded sample data held in the browser session. It does not connect to a production database and must not be used to store real complaints, evidence, personal information or classified records.
 
-## Production roadmap
-
-A production implementation should add secure authentication, role-based access, encrypted database and file storage, immutable audit logging, evidence integrity controls, backups, workflow approvals, retention policies and security monitoring.
+A production implementation must add authentication, role-based access, encrypted database and file storage, immutable audit logging, evidence integrity controls, backups, retention policies and security monitoring.
